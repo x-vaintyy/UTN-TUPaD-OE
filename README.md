@@ -26,7 +26,9 @@ Se utilizo la asistencia de IA (Notebook Gemini, Miro AI y ChatGPT):
 ## Historias de Usuario (Backlog):
 
 **HU-01 (Comprador Web):** Como cliente internacional, quiero seleccionar PayPal como método de pago en el checkout, para abonar mi compra en dólares de forma rápida y segura. 
+
 **HU-02 (Administración / Facturación):** Como encargado administrativo, quiero que el sistema convierta automáticamente el cobro en dólares a pesos y emita la factura electrónica ante ARCA, para cumplir con las normativas fiscales vigentes. 
+
 **HU-03 (Encargado de Depósito):** Como operario de logística, quiero recibir la orden de despacho junto con la verificación de stock y el código de seguridad, para entregar el paquete en el mostrador prioritario del local.
 
 ## Enlaces a la documentacion

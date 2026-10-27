@@ -13,10 +13,10 @@ En este repositorio se alberga la documentación técnica y funcional para la in
 * **Docente Tutor:** Prof. María Lourdes Ricciuto
 
 ## Entregas anteriores
-**Entrega N.º 1:** Enfoque Sistémico y Modelo de Sistema Abierto (TGS).
-**Entrega N.º 2:** Análisis FODA, Objetivos Cuantitativos y Planificación en Diagrama de Gantt.
-**Entrega N.º 3:** Organigrama Jerárquico Normalizado y Diccionario de Datos.
-**Entrega N.º 4:** Modelado BPMN 2.0, Entorno Colaborativo Git/GitHub, Tablero Ágil y Control.
+*  **Entrega N.º 1:** Enfoque Sistémico y Modelo de Sistema Abierto (TGS).
+*  **Entrega N.º 2:** Análisis FODA, Objetivos Cuantitativos y Planificación en Diagrama de Gantt.
+*  **Entrega N.º 3:** Organigrama Jerárquico Normalizado y Diccionario de Datos.
+*  **Entrega N.º 4:** Modelado BPMN 2.0, Entorno Colaborativo Git/GitHub, Tablero Ágil y Control.
 
 ## Declaración de Uso Crítico de IA
 Se utilizo la asistencia de IA (Notebook Gemini, Miro AI y ChatGPT):
@@ -25,12 +25,33 @@ Se utilizo la asistencia de IA (Notebook Gemini, Miro AI y ChatGPT):
 
 ## Historias de Usuario (Backlog):
 
-**HU-01 (Comprador Web):** Como cliente internacional, quiero seleccionar PayPal como método de pago en el checkout, para abonar mi compra en dólares de forma rápida y segura. 
-
-**HU-02 (Administración / Facturación):** Como encargado administrativo, quiero que el sistema convierta automáticamente el cobro en dólares a pesos y emita la factura electrónica ante ARCA, para cumplir con las normativas fiscales vigentes. 
-
-**HU-03 (Encargado de Depósito):** Como operario de logística, quiero recibir la orden de despacho junto con la verificación de stock y el código de seguridad, para entregar el paquete en el mostrador prioritario del local.
+*  **HU-01 (Comprador Web):** Como cliente internacional, quiero seleccionar PayPal como método de pago en el checkout, para abonar mi compra en dólares de forma rápida y segura. 
+*  **HU-02 (Administración / Facturación):** Como encargado administrativo, quiero que el sistema convierta automáticamente el cobro en dólares a pesos y emita la factura electrónica ante ARCA, para cumplir con las normativas fiscales vigentes. 
+*  **HU-03 (Encargado de Depósito):** Como operario de logística, quiero recibir la orden de despacho junto con la verificación de stock y el código de seguridad, para entregar el paquete en el mostrador prioritario del local.
 
 ## Enlaces a la documentacion
 **Modelado BPMN:** [Ver Diagrama BPMN 2.0](./modelado_de_procesos_upscale_4x.pdf)
+
 **Tablero Agil de Gestion:** [Ver Tablero en GitHub Projects](https://github.com/users/x-vaintyy/projects/2)
+
+## Indicadores de Control y Estándares de Desempeño
+
+**Tiempo de Procesamiento de Pago (Eje Técnico):**
+
+*  **Estandar:** Procesar la conversión de divisas (USD a ARS) y validar la transacción con la API de PayPal en un tiempo máximo de **5 segundos** por operación.
+*  **Mecanismo de Control:** Monitoreo continuo mediante logs del servidor Backend. Si una solicitud supera los 5s, el sistema activa una compuerta de eventos (*Timeout*) y registra la alerta.
+
+**Emisión de Comprobante Fiscal (Eje Operativo):** 
+
+*  **Estándar:** Generar y enviar la factura electrónica legal en pesos argentinos (vía ARCA) en menos de **5 segundos** tras la aprobación del cobro, cubriendo el **100%** de las ventas. 
+*  **Mecanismo de Control:** Auditoría automática del módulo de facturación. Si la API fiscal no responde, el sistema reintenta la emisión y notifica a la Jefatura Comercial. 
+
+**Seguridad y Disponibilidad del Módulo (Eje Calidad/Seguridad):** 
+
+*  **Estándar:** Garantizar una disponibilidad del servicio del **99,9%** y mantener la tasa de intentos de fraude por debajo del **1%** del total de transacciones transfronterizas. 
+*  **Mecanismo de Control:** Filtros de seguridad en PayPal y registros de contracargos auditados semanalmente por la Jefatura de Sistemas e IT. 
+
+**Nivel de Adopción del Canal (Eje de Negocio):**  
+
+*  **Estándar:** Lograr que el **15%** de la facturación total del e-commerce provenga de pagos internacionales vía PayPal durante los primeros 6 meses post-implementación. * 
+*  **Mecanismo de Control:** Balance mensual de ingresos comparando cobros locales vs. divisas extranjeras.
